@@ -1,0 +1,11 @@
+version: '2.3'
+services:
+  json_flask:
+    build: .
+    container_name: 'json_flask'
+    working_dir: '/root/'
+    tty: true
+    volumes:
+      - ./opt:/root/opt
+    ports:
+      - "127.0.0.1:10033:10033"
